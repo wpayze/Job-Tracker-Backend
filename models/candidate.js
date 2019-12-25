@@ -9,8 +9,8 @@ var CandidateSchema = new Schema({
   address : {
     type: String
   },
-  website : {
-    type: String
+  location: {
+    type: Object
   },
   profile_picture : {
     type: String
@@ -19,14 +19,8 @@ var CandidateSchema = new Schema({
     type: String,
     requred: true
   },
-  linkedin : {
-    type: String
-  },
-  facebook : {
-    type: String
-  },
-  twitter : {
-    type: String
+  social_media: {
+    type: Object
   }
 
   //Agregar categoria

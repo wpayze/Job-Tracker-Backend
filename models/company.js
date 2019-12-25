@@ -9,23 +9,17 @@ var CompanySchema = new Schema({
   address : {
     type: String
   },
-  website : {
-    type: String
-  },
   logo : {
     type: String
   },
   rating : {
     type: Number
   },
-  linkedin : {
-    type: String
+  social_media: {
+    type: Object
   },
-  facebook : {
-    type: String
-  },
-  twitter : {
-    type: String
+  location: {
+    type: Object
   }
 }, { timestamps: true });
 
