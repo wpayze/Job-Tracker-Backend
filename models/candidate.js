@@ -12,7 +12,10 @@ var CandidateSchema = new Schema({
   location: {
     type: Object
   },
-  profile_picture : {
+  profile_picture : { //URL
+    type: String
+  },
+  cv: { //URL
     type: String
   },
   city : {
@@ -21,9 +24,12 @@ var CandidateSchema = new Schema({
   },
   social_media: {
     type: Object
+  },
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: 'Category',
   }
 
-  //Agregar categoria
 }, { timestamps: true });
 
 module.exports = mongoose.model('Candidate', CandidateSchema);

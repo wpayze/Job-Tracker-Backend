@@ -9,6 +9,9 @@ var CompanySchema = new Schema({
   address : {
     type: String
   },
+  location: {
+    type: Object
+  },
   logo : {
     type: String
   },
@@ -16,9 +19,6 @@ var CompanySchema = new Schema({
     type: Number
   },
   social_media: {
-    type: Object
-  },
-  location: {
     type: Object
   }
 }, { timestamps: true });
