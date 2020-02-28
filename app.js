@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var config = require('./config/database');
 
-mongoose.connect(config.database);
+mongoose.connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var api = require('./routes/api');
 
@@ -23,6 +23,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
 app.use(passport.initialize());
 
 // view engine setup

@@ -9,8 +9,8 @@ var CandidateSchema = new Schema({
   address : {
     type: String
   },
-  location: {
-    type: Object
+  desired_job: {
+    type: String
   },
   profile_picture : { //URL
     type: String
